@@ -13,6 +13,8 @@
 - #### Query process:
 ![img_3.png](img_3.png)
 
+Link: https://mp.weixin.qq.com/s/E0DSajtLuzbWrsACrk903Q
+
 ### TODO!
 1. Supports high-performance range query
 2. Index persistence

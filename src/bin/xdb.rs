@@ -23,8 +23,6 @@ enum Command {
     Remove { key: String },
 }
 
-const ROOT_PATH: &str = "/data";
-
 fn main() {
     let args = Cli::parse();
 
@@ -35,6 +33,11 @@ fn main() {
         Command::Get { key } => {
             println!("key: {}", key);
         },
+        Command::Set { key, val } => {
+            if let Err(err) = store.set(key, val) {
+                eprintln!("{:?}", err);
+            }
+        }
         _ => unimplemented!("Unsupported syntax"),
     }
 }

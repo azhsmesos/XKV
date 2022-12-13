@@ -19,7 +19,7 @@ impl KVStore {
     }
 
     pub fn set(&mut self, key: String, val: String) -> Result<()> {
-
+        self.storage.set(key, val)?;
         Ok(())
     }
 
